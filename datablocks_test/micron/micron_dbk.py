@@ -5,21 +5,22 @@ from itertools import combinations
 import gzip
 import os
 import pickle
-from sklearn.cluster import KMeans
 import tarfile
 import tempfile
 from typing import Optional, Dict, List
 
+import fasttext
 import fsspec
 from fsspec.callbacks import TqdmCallback
+import matplotlib.pyplot as plt
 
 import numpy as np
 import pandas as pd
-import pyarrow.parquet as pq
 
-import fasttext
-import matplotlib.pyplot as plt
 import plotly.express as px
+import pyarrow.parquet as pq
+from sklearn.cluster import KMeans
+import tqmd
 import umap
 
 from micron.cclustering import ZSConsensusClustering
